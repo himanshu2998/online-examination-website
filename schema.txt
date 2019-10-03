@@ -1,0 +1,144 @@
+DATABASE
+	Website
+TABLES
++-------------------+
+| Tables_in_website |
++-------------------+
+| admin             |
+| c                 |
+| company           |
+| cpp               |
+| datastructures    |
+| feedback          |
+| files             |
+| java              |
+| mon               |
+| paper             |
+| student           |
++-------------------+
+mysql> describe admin;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| name     | varchar(30) | NO   | PRI | NULL    |       |
+| password | varchar(20) | YES  |     | NULL    |       |
+| email    | varchar(40) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.57 sec)
+
+mysql> describe c;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| sno      | int(11)      | NO   | PRI | NULL    |       |
+| question | varchar(255) | YES  |     | NULL    |       |
+| choice1  | varchar(255) | YES  |     | NULL    |       |
+| choice2  | varchar(255) | YES  |     | NULL    |       |
+| choice3  | varchar(255) | YES  |     | NULL    |       |
+| choice4  | varchar(255) | YES  |     | NULL    |       |
+| choice   | varchar(255) | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+7 rows in set (0.05 sec)
+
+mysql> describe company;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| name     | varchar(30)  | NO   | PRI | NULL    |       |
+| password | varchar(30)  | YES  |     | NULL    |       |
+| type     | varchar(10)  | YES  |     | NULL    |       |
+| address  | varchar(255) | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+4 rows in set (0.07 sec)
+
+mysql> describe cpp;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| sno      | int(11)      | NO   | PRI | NULL    |       |
+| question | varchar(255) | YES  |     | NULL    |       |
+| choice1  | varchar(255) | YES  |     | NULL    |       |
+| choice2  | varchar(255) | YES  |     | NULL    |       |
+| choice3  | varchar(255) | YES  |     | NULL    |       |
+| choice4  | varchar(255) | YES  |     | NULL    |       |
+| choice   | varchar(255) | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+7 rows in set (0.04 sec)
+
+mysql> describe datastructures;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| sno      | int(11)      | NO   | PRI | NULL    |       |
+| question | varchar(255) | YES  |     | NULL    |       |
+| choice1  | varchar(255) | YES  |     | NULL    |       |
+| choice2  | varchar(255) | YES  |     | NULL    |       |
+| choice3  | varchar(255) | YES  |     | NULL    |       |
+| choice4  | varchar(255) | YES  |     | NULL    |       |
+| choice   | varchar(255) | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+7 rows in set (0.05 sec)
+
+mysql> describe feedback;
++---------------+--------------+------+-----+---------+-------+
+| Field         | Type         | Null | Key | Default | Extra |
++---------------+--------------+------+-----+---------+-------+
+| name          | varchar(30)  | NO   | PRI | NULL    |       |
+| stars         | int(2)       | YES  |     | NULL    |       |
+| feedbackgiven | varchar(255) | YES  |     | NULL    |       |
++---------------+--------------+------+-----+---------+-------+
+3 rows in set (0.06 sec)
+mysql> describe java;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| sno      | int(11)      | NO   | PRI | NULL    |       |
+| question | varchar(255) | YES  |     | NULL    |       |
+| choice1  | varchar(255) | YES  |     | NULL    |       |
+| choice2  | varchar(255) | YES  |     | NULL    |       |
+| choice3  | varchar(255) | YES  |     | NULL    |       |
+| choice4  | varchar(255) | YES  |     | NULL    |       |
+| choice   | varchar(255) | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+7 rows in set (0.05 sec)
+
+mysql> describe mon;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| sno   | int(2)      | YES  |     | NULL    |       |
+| name  | varchar(10) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.03 sec)
+
+mysql> describe paper;
++----------+---------+------+-----+---------+-------+
+| Field    | Type    | Null | Key | Default | Extra |
++----------+---------+------+-----+---------+-------+
+| question | int(11) | YES  |     | NULL    |       |
+| correct  | int(11) | YES  |     | NULL    |       |
+| wrong    | int(11) | YES  |     | NULL    |       |
++----------+---------+------+-----+---------+-------+
+3 rows in set (0.06 sec)
+
+mysql> describe student;
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| name           | varchar(30) | NO   | PRI | NULL    |       |
+| email          | varchar(40) | NO   |     | NULL    |       |
+| mobile         | varchar(13) | YES  |     | NULL    |       |
+| password       | varchar(20) | YES  |     | NULL    |       |
+| test           | varchar(20) | YES  |     | NULL    |       |
+| date_of_test   | date        | YES  |     | NULL    |       |
+| marks_obtained | int(11)     | YES  |     | NULL    |       |
+| question       | int(11)     | YES  |     | NULL    |       |
+| correct        | int(11)     | YES  |     | NULL    |       |
+| wrong          | int(11)     | YES  |     | NULL    |       |
+| outof          | int(11)     | YES  |     | NULL    |       |
+| gender         | varchar(2)  | YES  |     | NULL    |       |
+| passing_year   | varchar(12) | YES  |     | NULL    |       |
+| qualification  | varchar(10) | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+14 rows in set (0.09 sec)
+
